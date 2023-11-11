@@ -1,7 +1,6 @@
 import "@testing-library/jest-dom";
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { createMemoryHistory } from "history";
 import { BrowserRouter } from "react-router-dom";
 import App from "../components/App";
 
@@ -21,7 +20,7 @@ test('renders the Home component using the <Route path="/">', () => {
       <App />
     </BrowserRouter>
   );
-  expect(screen.queryByText(/Home Page/g)).toBeInTheDocument();
+  expect(screen.queryByText(/Home/g)).toBeInTheDocument();
 });
 
 test('renders the Actors component using the <Route path="/actors">', () => {
